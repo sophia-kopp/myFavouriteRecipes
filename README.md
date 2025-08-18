@@ -35,7 +35,6 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/sophia-kopp/myFavouriteRecipes.git
-cd recipe-manager-frontend
 ```
 
 2. Install dependencies:
