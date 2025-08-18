@@ -1,0 +1,8 @@
+<nav>
+<div class="action-buttons">
+  <button (click)="openNewRecipeDialog()">New Recipe</button>
+</div>
+</nav>
+@for (recipe of recipes; track recipe){
+  <app-recipes-detail-card [recipe]="recipe"/>
+}
