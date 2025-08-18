@@ -1,26 +1,32 @@
 <app-card>
-
-    <h3>{{recipe()?.title}}</h3>
-    <h3>{{recipe()?.id}}</h3>
-    <h3>{{recipe()?.favourite}}</h3>
+<div>
+    <h3>Title: {{recipe()?.title}}</h3>
+    <h3>Id: {{recipe()?.id}}</h3>
+    <h3>Favourite? {{recipe()?.favourite}}</h3>
     @if (detailView()){
-      <p>Detailview!</p>
-      <p>{{recipe()?.ingredients}}</p>
-      <p>{{recipe()?.favourite}}</p>
-      <p>{{recipe()?.comments}}</p>
+      <p>Ingredients: {{recipe()?.ingredients}}</p>
+      <p>Comments: {{recipe()?.comments}}</p>
     }
-<aside class="card-action-buttons">
-
+</div>
+  <div class="aside">
+  <div class="vl"></div>
+  <div class="card-action-buttons">
   <app-favourite-button [recipeId]="recipe()?.id ?? ''"/>
-  <button matFab extended (click)="deleteRecipe(recipe()?.id)">
-    <mat-icon>delete</mat-icon>
-    Delete Recipe
-  </button>
+
   @if (!detailView()){
       <button matFab extended (click)="goToDetailPage(recipe()?.id)">See All Details</button>
     }
+    @if (detailView()){
+      <button matFab extended (click)="addComment()">Add Comment</button>
+      <button matFab extended (click)="goToEditRecipe(recipe()?.id)">Edit Recipe</button>
+      <button matFab extended (click)="deleteRecipe(recipe()?.id)">
+        <mat-icon>delete</mat-icon>
+        Delete Recipe
+      </button>
+    }
 
-</aside>
+</div>
+  </div>
 </app-card>
 
 

@@ -33,4 +33,10 @@ export class RecipesDetailCard {
   deleteRecipe(id:string | undefined) {
     this.recipeService.deleteRecipe(id ?? '');
   }
-}
+
+  addComment(){
+
+  }
+  goToEditRecipe(recipe:InputSignal<Recipe>) {}
+
+  }
