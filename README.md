@@ -1,56 +1,104 @@
 # MyFavouriteReceipts
 
+A web application where you can store your favourite recipes.
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
 
-## Development server
+---
 
-To start a local development server, run:
+# 🍲 Recipe Manager (Frontend)
+
+This is a **frontend application built with Angular** that allows users to **create, view, edit, and delete cooking recipes**. It serves as the user interface for managing recipes, including ingredients, instructions, and categories.
+
+---
+
+## 📦 Features
+
+* 📝 Create, edit, and delete recipes
+* 📄 View detailed recipe information
+* 🧾 Add ingredients and cooking instructions
+* 🧾 Add comments on the recipes
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* [Node.js](https://nodejs.org/) (v16 or newer recommended)
+* [Angular CLI](https://angular.io/cli) (v16 or newer)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sophia-kopp/myFavouriteRecipes.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Open your browser and navigate to:
+   `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧠 Technologies Used
 
-```bash
-ng generate component component-name
+* **Angular** (latest version)
+* **RxJS** for reactive programming (in the future)
+* **Angular Router** for navigation
+* **SCSS** for styling
+
+---
+
+## 🔗 API Integration
+
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── components/     # UI components
+│   ├── pages/          # Page views
+│   ├── services/       # API and state management
+│   ├── models/         # Interfaces and types
+│   └── app-routing.module.ts
+├── assets/
+├── environments/
+└── styles.scss
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠️ Future Improvements
 
-## Building
+* Save data via API (connects to a backend)
+* Other users who you can share the recipes
+* User authentication & login
+* Image upload for recipes
+* Responsive mobile design
+* Categories & tags
+* Comments function
+* Filter and search recipes by ingredients
 
-To build the project run:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
