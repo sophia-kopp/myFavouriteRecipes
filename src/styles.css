@@ -66,4 +66,16 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif; /* Elegant für Headlines */
 }
+h1 {
+  font-size: 3.125rem;
+    background-image:linear-gradient(red 0%, deeppink 50%, purple 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+align-items: center;
+}
 

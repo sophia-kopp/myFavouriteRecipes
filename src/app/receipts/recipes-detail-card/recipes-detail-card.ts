@@ -5,6 +5,9 @@ import {Router} from '@angular/router';
 import {FavouriteButton} from '../../shared/favourite-button/favourite-button';
 import {RecipeService} from '../recipe.service';
 import {MatFabButton} from '@angular/material/button';
+import {MatDialog} from '@angular/material/dialog';
+import {NewRecipeDialog} from '../new-recipe-dialog/new-recipe-dialog';
+import {AddComment} from '../add-comment/add-comment';
 
 @Component({
   selector: 'app-recipes-detail-card',
@@ -26,6 +29,9 @@ export class RecipesDetailCard {
   private router = inject(Router);
   private recipeService = inject(RecipeService);
 
+  protected recipeDialog = inject(MatDialog);
+  protected commentDialog = inject(MatDialog);
+
   goToDetailPage(id?: string) {
     this.router.navigate(['/recipe', id]);
   }
@@ -33,10 +39,10 @@ export class RecipesDetailCard {
   deleteRecipe(id:string | undefined) {
     this.recipeService.deleteRecipe(id ?? '');
   }
-
   addComment(){
-
+    this.commentDialog.open(AddComment);
   }
-  goToEditRecipe(recipe:InputSignal<Recipe>) {}
-
+  goToEditRecipe(id?: string) {
+    this.recipeDialog.open(NewRecipeDialog);
   }
+}
