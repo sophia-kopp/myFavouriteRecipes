@@ -88,6 +88,8 @@ src/
 ## 🛠️ Future Improvements
 
 * Save data via API (connects to a backend)
+* Use a redux service
+* Testing
 * Other users who you can share the recipes
 * User authentication & login
 * Image upload for recipes
