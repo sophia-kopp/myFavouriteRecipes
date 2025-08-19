@@ -1,4 +1,4 @@
-import {Component, inject, input, InputSignal} from '@angular/core';
+import {Component, EventEmitter, inject, input, InputSignal, Output} from '@angular/core';
 import {Card} from '../../shared/card/card';
 import {MatIcon} from '@angular/material/icon';
 import {Router} from '@angular/router';
@@ -15,7 +15,8 @@ import {AddComment} from '../add-comment/add-comment';
     Card,
     MatIcon,
     FavouriteButton,
-    MatFabButton
+    MatFabButton,
+    AddComment
   ],
   templateUrl: './recipes-detail-card.html',
   styleUrl: './recipes-detail-card.css'
@@ -25,6 +26,8 @@ export class RecipesDetailCard {
   recipe:InputSignal<Recipe|undefined> = input();
 
   detailView = input(false)
+
+  @Output() newCommentEvent = new EventEmitter<string>();
 
   private router = inject(Router);
   private recipeService = inject(RecipeService);
@@ -40,8 +43,9 @@ export class RecipesDetailCard {
     this.recipeService.deleteRecipe(id ?? '');
     this.router.navigate(['']);
   }
-  addComment(){
-    this.commentDialog.open(AddComment);
+  addComment(id?:string){
+    this.commentDialog.open(AddComment, {id});
+    this.newCommentEvent.emit(id);
   }
   goToEditRecipe(id?: string) {
     this.recipeDialog.open(NewRecipeDialog);

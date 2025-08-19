@@ -29,7 +29,7 @@
       <button matFab extended (click)="goToDetailPage(recipe()?.id)">See All Details</button>
     }
     @if (detailView()){
-      <button matFab extended (click)="addComment()">Add Comment</button>
+      <button matFab extended (click)="addComment(recipe()?.id)">Add Comment</button>
       <button matFab extended (click)="goToEditRecipe(recipe()?.id)">Edit Recipe</button>
       <button matFab extended (click)="deleteRecipe(recipe()?.id)">
         <mat-icon>delete</mat-icon>

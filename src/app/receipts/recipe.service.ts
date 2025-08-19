@@ -59,8 +59,9 @@ export class RecipeService {
     recipes.push(recipe);
   }
 
-  updateRecipe(id: string, newRecipe: Recipe | undefined) {
-    const selectedRecipeIndex: number = recipes.findIndex(recipe => recipe.id === id);
+  updateRecipe(newRecipe: Recipe) {
+    const selectedRecipeIndex: number = recipes.findIndex(recipe => recipe.id === newRecipe?.id);
+    recipes[selectedRecipeIndex] = newRecipe;
   }
 
   deleteRecipe(id: string) {
