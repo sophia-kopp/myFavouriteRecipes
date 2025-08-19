@@ -27,7 +27,7 @@ export class NewRecipeDialog {
       ingredients: this.newRecipeForm.value.ingredients ?? [],
       preparation: this.newRecipeForm.value.preparation ?? '',
       favourite: false,
-      comments:''
+      comments:[]
     }
     this.recipeService.createNewRecipe(newRecipe);
   }

@@ -4,5 +4,5 @@ type Recipe = {
   ingredients: string[];
   preparation: string;
   favourite?: boolean;
-  comments?: string;
+  comments?: string[];
 }

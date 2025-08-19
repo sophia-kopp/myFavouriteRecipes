@@ -38,6 +38,7 @@ export class RecipesDetailCard {
 
   deleteRecipe(id:string | undefined) {
     this.recipeService.deleteRecipe(id ?? '');
+    this.router.navigate(['']);
   }
   addComment(){
     this.commentDialog.open(AddComment);

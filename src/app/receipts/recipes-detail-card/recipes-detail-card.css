@@ -1,3 +1,4 @@
+
 .card-action-buttons {
   display: grid;
   width: 100%;
@@ -18,5 +19,17 @@ button{
 
 .aside {
   display: flex;
-  width: 25%;
+  width: 30%;
+}
+
+.comment-card {
+  background-color: white;
+  box-shadow: #111827 1px 1px 1px;
+  color: #111827;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 18px;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
 }
